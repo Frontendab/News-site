@@ -1,0 +1,70 @@
+@import "../../style/sass/variables/variables.module";
+@import "../../style/sass/mixin/mixin.module";
+.first {
+  position: relative;
+  &:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background: #393939;
+    width: 368%;
+    left: -543px;
+    bottom: -21px;
+    z-index: -1;
+    @media #{$MAX_SM} {
+      background: #39393917;
+    }
+    @media #{$MAX_MD} {
+      content: none;
+    }
+  }
+  .do_not_miss {
+    position: relative;
+    color: $color-red-light;
+    margin: 0;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: $color-red;
+      @media #{$MIN_MD_MAX_LG} {
+        bottom: -31px;
+      }
+      @media #{$MIN_LG} {
+        bottom: -14.5px;
+      }
+      @media #{$MAX_MD} {
+        bottom: -14.5px;
+      }
+    }
+    @media #{$MAX_MD} {
+      margin-bottom: 25px;
+    }
+  }
+  @media #{$MAX_MD} {
+    flex-direction: column !important;
+  }
+  ul {
+    @media #{$MAX_MD} {
+      margin: 0 !important;
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media #{$MIN_MD_MAX_LG} {
+      margin: 0 !important;
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media #{$MIN_LG} {
+      display: flex !important;
+    }
+    & li {
+      height: max-content !important;
+      @media #{$MAX_MD} {
+        margin: 0 !important;
+        place-content: center;
+      }
+    }
+  }
+}

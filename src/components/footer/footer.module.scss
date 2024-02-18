@@ -1,0 +1,86 @@
+@import "../../style/sass/mixin/mixin.module";
+@import "../../style/sass/variables/variables.module";
+.footer {
+  background: #3939391f;
+  padding-top: 32px;
+  .first {
+    @media #{$MAX_SM} {
+      text-align: center !important;
+    }
+    .firstLorem {
+      margin: 22px 0;
+    }
+    ul {
+      display: flex;
+      grid-gap: 20px;
+      @media #{$MAX_SM} {
+        place-content: center !important;
+        margin-bottom: 25px !important;
+        padding-inline: 10px !important;
+      }
+      li {
+        background: rgb(66, 129, 255);
+        width: fit-content;
+        border-radius: 50%;
+        display: flex;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+  .parentTitle {
+    position: relative;
+    .title {
+      position: relative;
+      width: fit-content;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        left: 0;
+        bottom: -16px;
+        width: 100%;
+        background: black;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      left: 0;
+      bottom: -16px;
+      width: 100%;
+      background: red;
+      z-index: -1;
+    }
+  }
+  .gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px !important;
+    p {
+      text-align: center !important;
+      color: white !important;
+    }
+  }
+  .formEmail {
+    input {
+      @include styleInputEmail(100%);
+    }
+    button {
+      @include styleBtnSubscribe($color-red, 100%);
+    }
+  }
+  .onMobile {
+    @media #{$MAX_SM} {
+      width: 94%;
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../../../../style/sass/variables/variables.module";
+.containerSinglePageNews {
+  .contentPageSingleNews {
+    @media #{$MAX_MD} {
+      height: 281px !important;
+      width: 95% !important;
+      background-position: center !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      margin-top: 25px;
+      margin-left: 10px !important;
+      padding: 0 !important;
+    }
+  }
+}
+.parentContentText {
+  @media #{$MAX_MD} {
+    margin: 0 !important;
+    padding: 0 10px !important;
+    margin-top: 25px !important;
+  }
+  .title {
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    @media #{$MAX_MD} {
+      font-size: 25px;
+      margin-bottom: 25px;
+      line-height: 37px;
+    }
+  }
+  h5 {
+    @media #{$MAX_MD} {
+      font-size: 15px;
+    }
+  }
+}

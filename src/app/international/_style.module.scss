@@ -1,0 +1,24 @@
+@import "../../style/sass/variables/variables.module";
+@import "../../style/sass/mixin/mixin.module";
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  @media #{$MAX_SM} {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px !important;
+  }
+  @media #{$MIN_SM} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$MIN_LG} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .info {
+    @media #{$MAX_MD} {
+      bottom: 1px;
+    }
+    @media #{$MIN_MD} {
+      bottom: 15px;
+    }
+  }
+}

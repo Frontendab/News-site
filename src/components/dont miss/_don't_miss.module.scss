@@ -1,0 +1,227 @@
+@import "../../style/sass/variables/variables.module";
+@import "../../style/sass/mixin/mixin.module";
+
+$arrColors: (
+  "all": $color-btn-all,
+  "lifestyle": $color-lifestyle,
+  "vogue": $color-vogue,
+  "travel": $color-travel,
+  "gadgets": $color-gadgets,
+  "world": $color-world,
+  "more": $color-more,
+
+  "football": $color-lifestyle,
+  "Cricket": $color-vogue,
+  "Badminton": $color-travel,
+  "Boxing": $color-gadgets,
+  "Esports": $color-world,
+
+  "music": $color-gadgets,
+  "recipes": $color-vogue,
+
+  "basketball": $color-more,
+);
+
+.section {
+  @each $name, $color in $arrColors {
+    .#{$name} {
+      background: $color;
+      padding: 3px 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+  }
+  .health {
+    background: $color-health;
+    padding: 3px 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .spaceHeight {
+    @media #{$MAX_MD} {
+      height: 30px !important;
+    }
+  }
+  .content {
+    @media #{$MAX_MD} {
+      padding: 0 !important;
+    }
+    .newsDoNotMiss {
+      display: grid;
+      grid-gap: 33px;
+      grid-template-columns: repeat(2, 1fr);
+      @media #{$MAX_SM} {
+        display: block !important;
+      }
+      @media #{$MIN_SM_MAX_MD} {
+        margin-top: 50px;
+      }
+      .info {
+        @media #{$MAX_SM} {
+          bottom: -12px !important;
+        }
+        @media #{$APAD_AIR} {
+          bottom: -10px !important;
+        }
+      }
+    }
+    overflow-x: hidden !important;
+  }
+  .second {
+    & > div {
+      @media #{$MAX_SM} {
+        padding-left: 6px !important;
+      }
+      .Last {
+        @media #{$MAX_MD} {
+          position: relative !important;
+        }
+        @media #{$MIN_MD} {
+          position: absolute !important;
+          top: 0;
+        }
+      }
+      ul {
+        & li {
+          &.active {
+            @include borderBottom($color-red-light, 300%, $color-red-light);
+          }
+          & {
+            @include borderBottom(black, 245%, $color-dark-light);
+          }
+        }
+      }
+    }
+    .parentBtnNextAndPrev {
+      position: absolute;
+      right: -24px;
+      padding-bottom: 10px;
+      text-align: right;
+      bottom: -9%;
+      button {
+        @include styleBtnNextAndPrev($color-red-light);
+      }
+    }
+  }
+  .stayConnected {
+    .top {
+      @include styleForBorderBottomFormParentTitle();
+      h6 {
+        @include styleForBorderBottom(6px, 7px);
+      }
+      @media #{$MAX_MD} {
+        margin-left: 0px !important;
+      }
+      .platform {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid !important;
+        grid-gap: 8px;
+        margin-top: 10px;
+        .content {
+          color: white;
+          padding: 8px 0 !important;
+          width: 100%;
+          h5 {
+            margin: 0 12px;
+          }
+          div {
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .down {
+      cursor: pointer;
+      & > div {
+        height: 300px;
+        position: relative;
+        @media #{$MAX_MD} {
+          width: 100%;
+          margin-left: 0 !important;
+        }
+        @media #{$MIN_MD} {
+          width: 95%;
+          margin-left: 18px;
+        }
+        h4 {
+          display: grid;
+          place-content: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    @media #{$MAX_MD} {
+      margin-left: 10px !important;
+    }
+  }
+  .content_header,
+  .content_down {
+    display: grid;
+    grid-gap: 30px;
+    @media #{$MAX_SM} {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media #{$MIN_SM} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    & > div {
+      cursor: pointer;
+    }
+  }
+  .content_down {
+    display: grid !important;
+    grid-gap: 10px;
+    @media #{$MAX_SM} {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media #{$MIN_SM} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    & > div {
+      p {
+        width: 100%;
+        font-size: 11px;
+      }
+      h6 {
+        font-weight: 700;
+        line-height: 25px;
+        margin: 5px 0;
+      }
+    }
+  }
+  .row {
+    @media #{$MAX_SM} {
+      // grid-template-columns: repeat(1,1fr);
+    }
+    @media #{$MIN_MD} {
+      display: flex !important;
+    }
+    .contentFormAndNotifications {
+      .formEmail {
+        background: #dedada;
+        p {
+          padding: 25px 0;
+          font-size: 20px;
+          font-weight: 500;
+        }
+        button {
+          @include styleBtnSubscribe($color-red, 240px);
+        }
+        input {
+          @include styleInputEmail(240px);
+        }
+      }
+      .categories {
+        margin-top: 6px;
+        @include styleForBorderBottomFormParentTitle();
+        margin-left: 0 !important;
+        h6 {
+          @include styleForBorderBottom(6.7px, 6px);
+        }
+      }
+    }
+  }
+}

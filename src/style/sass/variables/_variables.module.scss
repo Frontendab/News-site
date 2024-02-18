@@ -1,0 +1,38 @@
+/* 
+//? =============MAIN VARIABLES COLORS ==================
+*/
+$color-primary: #1b7bfd;
+$color-red-light: #f65050;
+$color-blue-light: hsl(198, 90%, 61%);
+$color-instagram: #c23785;
+$color-red: #ef5043;
+$color-dark-light: #393939;
+$color-blue-title-category: #08f;
+$color-dark-yellow: #997c00;
+$color-blue-very-light: #49cfe8;
+
+//TODO: ===>>> THIS COLORS FOR HEAD DON'T MISS
+$color-btn-all: #fe4a51;
+$color-lifestyle: #a56cbd;
+$color-vogue: #2ecc71;
+$color-health: #0088ff;
+$color-travel: #997c00;
+$color-gadgets: #49cfe8;
+$color-world: #0088ff;
+$color-more: #4c60f5;
+
+/* 
+//? =============MAIN VARIABLES MEDIA QUERY ==================
+*/
+
+$MAX_MD: "(max-width:991px)";
+$MAX_430: "(max-width:430px)";
+$MIN_MD: "(min-width:992px)";
+$MAX_SM: "(max-width:767px)";
+$MIN_SM: "(min-width:768px)";
+$MIN_SM_MAX_MD: "(min-width:768px) and (max-width: 991px)";
+$MIN_MD_MAX_LG: "(min-width:992px) and (max-width: 1999px)";
+$MIN_LG: "(min-width:1200px)";
+$MIN_LG_MAX_XL: "(min-width:1200px) and (max-width: 1399px)";
+$MIN_XL: "(min-width:1400px)";
+$APAD_AIR: "(min-width:820px) and (max-width:1180px)";

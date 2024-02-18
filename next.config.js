@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const path = require("path");
 
-module.exports = nextConfig
+const nextConfig = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
+  reactStrictMode: true,
+  images: {
+    domains: [
+      "cdn2.unrealengine.com",
+      "i.ytimg.com",
+      "cdn.toucharcade.com",
+      "img.gamepix.com",
+      "images.pexels.com",
+    ],
+  },
+};
+
+module.exports = nextConfig;
