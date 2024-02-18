@@ -6,7 +6,6 @@ import { links } from "@/asset/data/data";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 
-export let widthWindows = window.innerWidth;
 const HandlingNavBarLinks = () => {
   const [currentIndexLink, setCurrentIndexLink] = useState();
 
