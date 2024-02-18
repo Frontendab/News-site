@@ -23,8 +23,7 @@ const HandlingNavBarLinks = () => {
 
   return (
     <>
-      {widthWindows <= 991 ? (
-        <div>
+        <div className={styles.ON_MAX_MD}>
           <FaBarsStaggered
             style={{
               fontSize: "40px",
@@ -61,8 +60,7 @@ const HandlingNavBarLinks = () => {
             </ul>
           </div>
         </div>
-      ) : (
-        <ul className="d-flex align-items-center">
+        <ul className={`d-flex align-items-center ${styles.ON_MIN_MD}`}>
           {links.map((link, i) => (
             <Link key={i} href={link.path}>
               <li
@@ -76,7 +74,6 @@ const HandlingNavBarLinks = () => {
             </Link>
           ))}
         </ul>
-      )}
     </>
   );
 };
