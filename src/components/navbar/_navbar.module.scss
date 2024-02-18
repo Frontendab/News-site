@@ -199,3 +199,20 @@
     }
   }
 }
+
+.ON_MAX_MD {
+  @media #{$MAX_MD} {
+    display: none;
+  }
+  @media #{$MIN_MD} {
+    display: block;
+  }
+} 
+.ON_MIN_MD {
+  @media #{$MAX_MD} {
+    display: block;
+  }
+  @media #{$MIN_MD} {
+    display: none;
+  }
+} 
